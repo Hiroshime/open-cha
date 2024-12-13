@@ -36,12 +36,12 @@ def authenticate():
 @basic_views.route('/logout')
 def logout():
     session.clear()
-    return redirect('basic_views.login')
+    return redirect(url_for('basic_views.login'))
 
 @basic_views.route('/list_gift')
 def list_gift():
     if 'logged' not in session:
-        return redirect('basic_views.login')
+        return redirect(url_for('basic_views.login'))
     else:
         gifts = Gift.query.all()
         print(gifts)
@@ -50,7 +50,7 @@ def list_gift():
 @basic_views.route('/get_gift/<int:id>')
 def get_gift(id):
     if 'logged' not in session:
-        return redirect('basic_views.login')
+        return redirect(url_for('basic_views.login'))
     else:
         gift = Gift.query.get(id)
 
@@ -64,7 +64,7 @@ def get_gift(id):
 @basic_views.route('/release_gift/<int:id>')
 def release_gift(id):
     if 'logged' not in session:
-        return redirect('basic_views.login')
+        return redirect(url_for('basic_views.login'))
     else:
         gift = Gift.query.get(id)
 
