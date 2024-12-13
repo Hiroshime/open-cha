@@ -85,6 +85,7 @@
     </div>
     <div class="gift-container">
         <h1>Available Gifts</h1>
+        <a href="{{ url_for('basic_views.logout'}}" class="gift-button release-gift-button">Sair</a>
         {% for gift in gifts %}
         <div class="gift-item">
             <span class="gift-name">{{gift.name}}</span>
@@ -94,6 +95,15 @@
                 <span class="not-available">Pego por {{ gift.user_id }}</span>
             {% endif %}
             <a href="{{ url_for('basic_views.delete_gift',id=gift.id) }}" class="gift-button release-gift-button">Deletar</a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="gift-container">
+        <h1>Available Users</h1>
+        {% for user in users %}
+        <div class="gift-item">
+            <span class="user-id">{{user.id}}</span>
+            <span class="user-name">{{user.name}}</span>
         </div>
         {% endfor %}
     </div>

@@ -33,43 +33,56 @@ def authenticate():
             db.session.add(new_user)
             db.session.commit()
 
+@basic_views.route('/logout')
+def logout():
+    session.clear()
+    return redirect('basic_views.login')
 
 @basic_views.route('/list_gift')
 def list_gift():
-    gifts = Gift.query.all()
-    print(gifts)
-    return render_template('giftlist.html',gifts=gifts)
+    if 'logged' not in session:
+        return redirect('basic_views.login')
+    else:
+        gifts = Gift.query.all()
+        print(gifts)
+        return render_template('giftlist.html',gifts=gifts)
 
 @basic_views.route('/get_gift/<int:id>')
 def get_gift(id):
-    gift = Gift.query.get(id)
+    if 'logged' not in session:
+        return redirect('basic_views.login')
+    else:
+        gift = Gift.query.get(id)
 
-    if gift:
-        gift.available = 0
-        gift.user_id = session['logged']
+        if gift:
+            gift.available = 0
+            gift.user_id = session['logged']
 
-        db.session.commit()
-
-    return redirect(url_for('basic_views.list_gift'))
+            db.session.commit()
+        return redirect(url_for('basic_views.list_gift'))
 
 @basic_views.route('/release_gift/<int:id>')
 def release_gift(id):
-    gift = Gift.query.get(id)
+    if 'logged' not in session:
+        return redirect('basic_views.login')
+    else:
+        gift = Gift.query.get(id)
 
-    if gift:
-        gift.available = 1
-        gift.user_id = 0
+        if gift:
+            gift.available = 1
+            gift.user_id = 0
 
-        db.session.commit()
+            db.session.commit()
 
-    return redirect(url_for('basic_views.list_gift'))
+        return redirect(url_for('basic_views.list_gift'))
 
 @basic_views.route('/adm_gifts')
 def adm_gifts():
     if session['logged'] == os.getenv('ADMIN_ID'):
         gifts = Gift.query.all()
+        users = User.query.all()
         print(gifts)
-        return render_template('adminstrator.html',gifts=gifts)
+        return render_template('adminstrator.html',gifts=gifts,users=users)
     else:
         return redirect('basic_views.login')
 @basic_views.route('/delete_gift/<int:id>')
