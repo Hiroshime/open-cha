@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifts List</title>
+    <title>Administrador de Presentes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,7 +84,7 @@
         </form>
     </div>
     <div class="gift-container">
-        <h1>Available Gifts</h1>
+        <h1>Presentes</h1>
         <a href="{{ url_for('basic_views.logout')}}" class="gift-button release-gift-button">Sair</a>
         {% for gift in gifts %}
         <div class="gift-item">
@@ -99,7 +99,7 @@
         {% endfor %}
     </div>
     <div class="gift-container">
-        <h1>Available Users</h1>
+        <h1>Pessoas</h1>
         {% for user in users %}
         <div class="gift-item">
             <span class="user-id">{{user.id}}</span>

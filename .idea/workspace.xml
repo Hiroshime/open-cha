@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9ac651ca-ece3-4859-ab17-7acbedbe4f87" name="Changes" comment="new user page and database connection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/adminstrator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/adminstrator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/giftlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/giftlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734115208131</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="new user page and database connection">
+      <option name="closed" value="true" />
+      <created>1734116973785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734116973785</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
