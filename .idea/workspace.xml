@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ac651ca-ece3-4859-ab17-7acbedbe4f87" name="Changes" comment="initial">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/adminstrator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/adminstrator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/giftlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/giftlist.html" afterDir="false" />
-    </list>
+    <list default="true" id="9ac651ca-ece3-4859-ab17-7acbedbe4f87" name="Changes" comment="new user page and database connection" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +20,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Hiroshime"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e32dc269-4a95-4077-a275-3a73eeeea87e" />
+        <option name="url" value="https://github.com/Hiroshime/ellenoctavio" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
@@ -111,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734109988082</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new user page and database connection">
+      <option name="closed" value="true" />
+      <created>1734111798619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734111798619</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="new user page and database connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="new user page and database connection" />
   </component>
 </project>
