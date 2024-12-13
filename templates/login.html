@@ -60,7 +60,7 @@
         <img src="/static/image.png" alt="Logo">
         <form method="POST" action="{{ url_for('basic_views.authenticate') }}">
             <input type="text" name="name" placeholder="Nome Completo" required>
-            <input type="text" name="phone" placeholder="telefone com DDD apenas numeros 11912321232" required>
+            <input type="text" name="phone" maxlength="11" placeholder="telefone com DDD apenas numeros 11912321232" required>
             <button type="submit">Entrar</button>
         </form>
     </div>
