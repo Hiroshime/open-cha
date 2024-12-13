@@ -23,13 +23,13 @@ def authenticate():
             session['name'] = request.form['name']
             return redirect(url_for('basic_views.adm_gifts'))
 
-        user = User.query.filter_by(name=request.form['name']).first()
+        user = User.query.filter_by(phone=request.form['phone']).first()
         if user:
             session['logged'] = user.id
             session['name'] = user.name
             return redirect(url_for('basic_views.list_gift'))
         else:
-            new_user = User(name=request.form['name'],register_date=datetime.now())
+            new_user = User(name=request.form['name'],phone=request.form['phone'],register_date=datetime.now())
             db.session.add(new_user)
             db.session.commit()
 
