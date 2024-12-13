@@ -76,7 +76,7 @@
         <div class="gift-item">
             <span class="gift-name">{{gift.name}}</span>
             {% if gift.available == 1 %}
-                <a href="{{ url_for('basic_views.get_gift',id=gift.id) }}" class="gift-button get-gift-button">Pega presente</a>
+                <a href="{{ url_for('basic_views.get_gift',id=gift.id) }}" class="gift-button get-gift-button">Pegar presente</a>
             {% else %}
                 {% if gift.user_id == session['logged'] %}
                     <a href="{{ url_for('basic_views.release_gift',id=gift.id) }}" class="gift-button release-gift-button">Soltar presente</a>
